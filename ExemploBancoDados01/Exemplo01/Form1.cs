@@ -95,20 +95,26 @@ namespace Exemplo01
                 return;
             }
 
-            SqlConnection conexao = new SqlConnection();
-            conexao.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=T:\Documentos\Eduardo.mdf;Integrated Security=True;Connect Timeout=30";
-            conexao.Open();
+            DialogResult caixaDialogo = MessageBox.Show("Desejá realmente apagar?", "AVISO", MessageBoxButtons.YesNo);
 
-            SqlCommand comando = new SqlCommand();
-            comando.Connection = conexao;
-            comando.CommandText = "DELETE FROM carros WHERE id = @ID";
+            if (caixaDialogo == DialogResult.Yes)
+            {
 
-            int id = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-            comando.Parameters.AddWithValue("@ID", id);
-            comando.ExecuteNonQuery();
+                SqlConnection conexao = new SqlConnection();
+                conexao.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=T:\Documentos\Eduardo.mdf;Integrated Security=True;Connect Timeout=30";
+                conexao.Open();
 
-            conexao.Close();
-            AtualizarTabela();
+                SqlCommand comando = new SqlCommand();
+                comando.Connection = conexao;
+                comando.CommandText = "DELETE FROM carros WHERE id = @ID";
+
+                int id = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+                comando.Parameters.AddWithValue("@ID", id);
+                comando.ExecuteNonQuery();
+
+                conexao.Close();
+                AtualizarTabela();
+            }
         }
     }
 }
