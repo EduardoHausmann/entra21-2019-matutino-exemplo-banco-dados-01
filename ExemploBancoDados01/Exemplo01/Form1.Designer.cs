@@ -152,9 +152,9 @@
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(27, 249);
+            this.btnSalvar.Location = new System.Drawing.Point(50, 249);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(100, 43);
+            this.btnSalvar.Size = new System.Drawing.Size(100, 50);
             this.btnSalvar.TabIndex = 8;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
@@ -174,7 +174,8 @@
             this.dataGridView1.Location = new System.Drawing.Point(216, 67);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(398, 223);
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(395, 223);
             this.dataGridView1.TabIndex = 9;
             // 
             // ColumnId
@@ -213,9 +214,9 @@
             // 
             // btnApagar
             // 
-            this.btnApagar.Location = new System.Drawing.Point(438, 18);
+            this.btnApagar.Location = new System.Drawing.Point(457, 11);
             this.btnApagar.Name = "btnApagar";
-            this.btnApagar.Size = new System.Drawing.Size(100, 43);
+            this.btnApagar.Size = new System.Drawing.Size(100, 50);
             this.btnApagar.TabIndex = 10;
             this.btnApagar.Text = "Apagar";
             this.btnApagar.UseVisualStyleBackColor = true;
@@ -241,7 +242,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Cadastro de Carro";
             this.Activated += new System.EventHandler(this.Form1_Activated);
             ((System.ComponentModel.ISupportInitialize)(this.nudAno)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

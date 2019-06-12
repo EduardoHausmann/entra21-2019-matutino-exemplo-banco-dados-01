@@ -89,6 +89,12 @@ namespace Exemplo01
 
         private void btnApagar_Click(object sender, EventArgs e)
         {
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Cadastre um carro");
+                return;
+            }
+
             SqlConnection conexao = new SqlConnection();
             conexao.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=T:\Documentos\Eduardo.mdf;Integrated Security=True;Connect Timeout=30";
             conexao.Open();
