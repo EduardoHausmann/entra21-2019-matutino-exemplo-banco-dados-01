@@ -44,6 +44,8 @@
             this.ColumnPreco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnAno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnApagar = new System.Windows.Forms.Button();
+            this.lblCodigo = new System.Windows.Forms.Label();
+            this.lblId = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nudAno)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -52,7 +54,7 @@
             // 
             this.lblModelo.AutoSize = true;
             this.lblModelo.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblModelo.Location = new System.Drawing.Point(27, 11);
+            this.lblModelo.Location = new System.Drawing.Point(21, 67);
             this.lblModelo.Name = "lblModelo";
             this.lblModelo.Size = new System.Drawing.Size(68, 21);
             this.lblModelo.TabIndex = 0;
@@ -61,7 +63,7 @@
             // txtModelo
             // 
             this.txtModelo.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtModelo.Location = new System.Drawing.Point(27, 35);
+            this.txtModelo.Location = new System.Drawing.Point(21, 91);
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(183, 29);
             this.txtModelo.TabIndex = 1;
@@ -70,7 +72,7 @@
             // 
             this.lblCor.AutoSize = true;
             this.lblCor.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCor.Location = new System.Drawing.Point(27, 67);
+            this.lblCor.Location = new System.Drawing.Point(21, 123);
             this.lblCor.Name = "lblCor";
             this.lblCor.Size = new System.Drawing.Size(39, 21);
             this.lblCor.TabIndex = 2;
@@ -93,7 +95,7 @@
             "Roxo",
             "Verde",
             "Vermelho"});
-            this.cbCor.Location = new System.Drawing.Point(27, 91);
+            this.cbCor.Location = new System.Drawing.Point(21, 147);
             this.cbCor.Name = "cbCor";
             this.cbCor.Size = new System.Drawing.Size(183, 29);
             this.cbCor.Sorted = true;
@@ -103,7 +105,7 @@
             // 
             this.lblPreco.AutoSize = true;
             this.lblPreco.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPreco.Location = new System.Drawing.Point(27, 134);
+            this.lblPreco.Location = new System.Drawing.Point(21, 190);
             this.lblPreco.Name = "lblPreco";
             this.lblPreco.Size = new System.Drawing.Size(54, 21);
             this.lblPreco.TabIndex = 4;
@@ -112,7 +114,7 @@
             // mtbPreco
             // 
             this.mtbPreco.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbPreco.Location = new System.Drawing.Point(27, 158);
+            this.mtbPreco.Location = new System.Drawing.Point(21, 214);
             this.mtbPreco.Name = "mtbPreco";
             this.mtbPreco.Size = new System.Drawing.Size(183, 29);
             this.mtbPreco.TabIndex = 5;
@@ -121,7 +123,7 @@
             // 
             this.lblAno.AutoSize = true;
             this.lblAno.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAno.Location = new System.Drawing.Point(27, 190);
+            this.lblAno.Location = new System.Drawing.Point(21, 246);
             this.lblAno.Name = "lblAno";
             this.lblAno.Size = new System.Drawing.Size(42, 21);
             this.lblAno.TabIndex = 6;
@@ -130,7 +132,7 @@
             // nudAno
             // 
             this.nudAno.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudAno.Location = new System.Drawing.Point(27, 214);
+            this.nudAno.Location = new System.Drawing.Point(21, 270);
             this.nudAno.Maximum = new decimal(new int[] {
             2019,
             0,
@@ -152,7 +154,7 @@
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(50, 249);
+            this.btnSalvar.Location = new System.Drawing.Point(12, 313);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(100, 50);
             this.btnSalvar.TabIndex = 8;
@@ -171,12 +173,13 @@
             this.ColumnCor,
             this.ColumnPreco,
             this.ColumnAno});
-            this.dataGridView1.Location = new System.Drawing.Point(216, 67);
+            this.dataGridView1.Location = new System.Drawing.Point(224, 27);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(395, 223);
+            this.dataGridView1.Size = new System.Drawing.Size(395, 336);
             this.dataGridView1.TabIndex = 9;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // ColumnId
             // 
@@ -214,7 +217,7 @@
             // 
             // btnApagar
             // 
-            this.btnApagar.Location = new System.Drawing.Point(457, 11);
+            this.btnApagar.Location = new System.Drawing.Point(118, 313);
             this.btnApagar.Name = "btnApagar";
             this.btnApagar.Size = new System.Drawing.Size(100, 50);
             this.btnApagar.TabIndex = 10;
@@ -222,12 +225,34 @@
             this.btnApagar.UseVisualStyleBackColor = true;
             this.btnApagar.Click += new System.EventHandler(this.btnApagar_Click);
             // 
+            // lblCodigo
+            // 
+            this.lblCodigo.AutoSize = true;
+            this.lblCodigo.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigo.Location = new System.Drawing.Point(21, 27);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(70, 21);
+            this.lblCodigo.TabIndex = 11;
+            this.lblCodigo.Text = "Código:";
+            // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblId.Location = new System.Drawing.Point(114, 27);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(19, 21);
+            this.lblId.TabIndex = 12;
+            this.lblId.Text = "0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(617, 302);
+            this.ClientSize = new System.Drawing.Size(625, 375);
+            this.Controls.Add(this.lblId);
+            this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.btnApagar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnSalvar);
@@ -243,7 +268,7 @@
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Cadastro de Carro";
-            this.Activated += new System.EventHandler(this.Form1_Activated);
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudAno)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -269,6 +294,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPreco;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnAno;
         private System.Windows.Forms.Button btnApagar;
+        private System.Windows.Forms.Label lblCodigo;
+        private System.Windows.Forms.Label lblId;
     }
 }
 
