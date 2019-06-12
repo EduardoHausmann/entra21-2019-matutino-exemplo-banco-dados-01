@@ -40,6 +40,9 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ColumnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnModelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnPreco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnAno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.nudAno)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -163,8 +166,11 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnId,
-            this.ColumnModelo});
-            this.dataGridView1.Location = new System.Drawing.Point(216, 23);
+            this.ColumnModelo,
+            this.ColumnCor,
+            this.ColumnPreco,
+            this.ColumnAno});
+            this.dataGridView1.Location = new System.Drawing.Point(216, 33);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(325, 257);
@@ -175,6 +181,7 @@
             this.ColumnId.HeaderText = "Código";
             this.ColumnId.Name = "ColumnId";
             this.ColumnId.ReadOnly = true;
+            this.ColumnId.Width = 50;
             // 
             // ColumnModelo
             // 
@@ -182,12 +189,32 @@
             this.ColumnModelo.Name = "ColumnModelo";
             this.ColumnModelo.ReadOnly = true;
             // 
+            // ColumnCor
+            // 
+            this.ColumnCor.HeaderText = "Cor";
+            this.ColumnCor.Name = "ColumnCor";
+            this.ColumnCor.ReadOnly = true;
+            this.ColumnCor.Width = 75;
+            // 
+            // ColumnPreco
+            // 
+            this.ColumnPreco.HeaderText = "Preço";
+            this.ColumnPreco.Name = "ColumnPreco";
+            this.ColumnPreco.ReadOnly = true;
+            // 
+            // ColumnAno
+            // 
+            this.ColumnAno.HeaderText = "Ano";
+            this.ColumnAno.Name = "ColumnAno";
+            this.ColumnAno.ReadOnly = true;
+            this.ColumnAno.Width = 50;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(553, 302);
+            this.ClientSize = new System.Drawing.Size(555, 302);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.nudAno);
@@ -222,6 +249,9 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnId;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnModelo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPreco;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnAno;
     }
 }
 

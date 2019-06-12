@@ -41,8 +41,8 @@ namespace Exemplo01
 
             MessageBox.Show("Registro criado com sucesso");
             LimparCampos();
-
             conexao.Close();
+            AtualizarTabela();
         }
 
         private void LimparCampos()
@@ -66,14 +66,18 @@ namespace Exemplo01
             DataTable tabela = new DataTable();
             tabela.Load(comando.ExecuteReader());
 
+            dataGridView1.RowCount = 0;
             for (int i = 0; i < tabela.Rows.Count; i++)
             {
                 DataRow linhas = tabela.Rows[i];
                 Carro carro = new Carro();
                 carro.Id = Convert.ToInt32(linhas["id"]);
                 carro.Modelo = linhas["modelo"].ToString();
+                carro.Cor = linhas["cor"].ToString();
+                carro.Preco = Convert.ToDecimal(linhas["preco"]);
+                carro.Ano = Convert.ToInt32(linhas["ano"]);
                 dataGridView1.Rows.Add(new string[]{
-                    carro.Id.ToString(), carro.Modelo
+                    carro.Id.ToString(), carro.Modelo, carro.Cor, carro.Preco.ToString(), carro.Ano.ToString()
                 });
             }
         }
