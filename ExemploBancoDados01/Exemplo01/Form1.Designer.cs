@@ -37,7 +37,11 @@
             this.lblAno = new System.Windows.Forms.Label();
             this.nudAno = new System.Windows.Forms.NumericUpDown();
             this.btnSalvar = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ColumnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnModelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.nudAno)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblModelo
@@ -70,11 +74,25 @@
             // 
             // cbCor
             // 
+            this.cbCor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCor.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCor.FormattingEnabled = true;
+            this.cbCor.Items.AddRange(new object[] {
+            "Amarelo",
+            "Azul",
+            "Branco",
+            "Bronze",
+            "Cinza",
+            "Laranja",
+            "Preto",
+            "Rosa",
+            "Roxo",
+            "Verde",
+            "Vermelho"});
             this.cbCor.Location = new System.Drawing.Point(27, 91);
             this.cbCor.Name = "cbCor";
             this.cbCor.Size = new System.Drawing.Size(183, 29);
+            this.cbCor.Sorted = true;
             this.cbCor.TabIndex = 3;
             // 
             // lblPreco
@@ -109,9 +127,24 @@
             // 
             this.nudAno.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nudAno.Location = new System.Drawing.Point(27, 214);
+            this.nudAno.Maximum = new decimal(new int[] {
+            2019,
+            0,
+            0,
+            0});
+            this.nudAno.Minimum = new decimal(new int[] {
+            1950,
+            0,
+            0,
+            0});
             this.nudAno.Name = "nudAno";
             this.nudAno.Size = new System.Drawing.Size(183, 29);
             this.nudAno.TabIndex = 7;
+            this.nudAno.Value = new decimal(new int[] {
+            1950,
+            0,
+            0,
+            0});
             // 
             // btnSalvar
             // 
@@ -123,11 +156,39 @@
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnId,
+            this.ColumnModelo});
+            this.dataGridView1.Location = new System.Drawing.Point(216, 23);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(325, 257);
+            this.dataGridView1.TabIndex = 9;
+            // 
+            // ColumnId
+            // 
+            this.ColumnId.HeaderText = "Código";
+            this.ColumnId.Name = "ColumnId";
+            this.ColumnId.ReadOnly = true;
+            // 
+            // ColumnModelo
+            // 
+            this.ColumnModelo.HeaderText = "Modelo";
+            this.ColumnModelo.Name = "ColumnModelo";
+            this.ColumnModelo.ReadOnly = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(553, 302);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.nudAno);
             this.Controls.Add(this.lblAno);
@@ -139,7 +200,9 @@
             this.Controls.Add(this.lblModelo);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Activated += new System.EventHandler(this.Form1_Activated);
             ((System.ComponentModel.ISupportInitialize)(this.nudAno)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -156,6 +219,9 @@
         private System.Windows.Forms.Label lblAno;
         private System.Windows.Forms.NumericUpDown nudAno;
         private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnModelo;
     }
 }
 

@@ -1,0 +1,10 @@
+T:\Documentos\GitHub\entra21-2019-matutino-exemplo-banco-dados-01\ExemploBancoDados01\Exemplo01\bin\Debug\Exemplo01.exe.config
+T:\Documentos\GitHub\entra21-2019-matutino-exemplo-banco-dados-01\ExemploBancoDados01\Exemplo01\bin\Debug\Exemplo01.exe
+T:\Documentos\GitHub\entra21-2019-matutino-exemplo-banco-dados-01\ExemploBancoDados01\Exemplo01\bin\Debug\Exemplo01.pdb
+T:\Documentos\GitHub\entra21-2019-matutino-exemplo-banco-dados-01\ExemploBancoDados01\Exemplo01\obj\Debug\Exemplo01.csprojAssemblyReference.cache
+T:\Documentos\GitHub\entra21-2019-matutino-exemplo-banco-dados-01\ExemploBancoDados01\Exemplo01\obj\Debug\Exemplo01.Form1.resources
+T:\Documentos\GitHub\entra21-2019-matutino-exemplo-banco-dados-01\ExemploBancoDados01\Exemplo01\obj\Debug\Exemplo01.Properties.Resources.resources
+T:\Documentos\GitHub\entra21-2019-matutino-exemplo-banco-dados-01\ExemploBancoDados01\Exemplo01\obj\Debug\Exemplo01.csproj.GenerateResource.cache
+T:\Documentos\GitHub\entra21-2019-matutino-exemplo-banco-dados-01\ExemploBancoDados01\Exemplo01\obj\Debug\Exemplo01.csproj.CoreCompileInputs.cache
+T:\Documentos\GitHub\entra21-2019-matutino-exemplo-banco-dados-01\ExemploBancoDados01\Exemplo01\obj\Debug\Exemplo01.exe
+T:\Documentos\GitHub\entra21-2019-matutino-exemplo-banco-dados-01\ExemploBancoDados01\Exemplo01\obj\Debug\Exemplo01.pdb
