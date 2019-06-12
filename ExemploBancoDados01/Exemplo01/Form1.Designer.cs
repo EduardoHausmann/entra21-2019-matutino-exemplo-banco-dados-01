@@ -43,6 +43,7 @@
             this.ColumnCor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnPreco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnAno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnApagar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudAno)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -170,10 +171,10 @@
             this.ColumnCor,
             this.ColumnPreco,
             this.ColumnAno});
-            this.dataGridView1.Location = new System.Drawing.Point(216, 33);
+            this.dataGridView1.Location = new System.Drawing.Point(216, 67);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(325, 257);
+            this.dataGridView1.Size = new System.Drawing.Size(398, 223);
             this.dataGridView1.TabIndex = 9;
             // 
             // ColumnId
@@ -188,6 +189,7 @@
             this.ColumnModelo.HeaderText = "Modelo";
             this.ColumnModelo.Name = "ColumnModelo";
             this.ColumnModelo.ReadOnly = true;
+            this.ColumnModelo.Width = 75;
             // 
             // ColumnCor
             // 
@@ -209,12 +211,23 @@
             this.ColumnAno.ReadOnly = true;
             this.ColumnAno.Width = 50;
             // 
+            // btnApagar
+            // 
+            this.btnApagar.Location = new System.Drawing.Point(438, 18);
+            this.btnApagar.Name = "btnApagar";
+            this.btnApagar.Size = new System.Drawing.Size(100, 43);
+            this.btnApagar.TabIndex = 10;
+            this.btnApagar.Text = "Apagar";
+            this.btnApagar.UseVisualStyleBackColor = true;
+            this.btnApagar.Click += new System.EventHandler(this.btnApagar_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(555, 302);
+            this.ClientSize = new System.Drawing.Size(617, 302);
+            this.Controls.Add(this.btnApagar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.nudAno);
@@ -225,6 +238,8 @@
             this.Controls.Add(this.lblCor);
             this.Controls.Add(this.txtModelo);
             this.Controls.Add(this.lblModelo);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Activated += new System.EventHandler(this.Form1_Activated);
@@ -252,6 +267,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCor;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPreco;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnAno;
+        private System.Windows.Forms.Button btnApagar;
     }
 }
 
